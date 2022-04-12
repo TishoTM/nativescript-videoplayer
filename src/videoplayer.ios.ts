@@ -240,10 +240,10 @@ export class Video extends VideoCommon {
   }
 
   public getVideoSize(): { width: number; height: number } {
-    const r = this._playerController.videoBounds;
+    const currentItem = this.player.currentItem;
     return {
-      width: r.size.width,
-      height: r.size.height
+      width: currentItem.presentationSize.width,
+      height: currentItem.presentationSize.height
     };
   }
 
